@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <title>vue-cli3-web</title>
+  </head>
+  <body>
+    <noscript>
+      <strong>We're sorry but vue-cli3-web doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+
+    <script src="./viewport-units-buggyfill.min.js"></script>
+    <script>
+      window.onload = function () {
+        window.viewportUnitsBuggyfill.init({
+          hacks: window.viewportUnitsBuggyfillHacks
+        });
+  
+        // var winDPI = window.devicePixelRatio;
+        // var uAgent = window.navigator.userAgent;
+        // var screenHeight = window.screen.height;
+        // var screenWidth = window.screen.width;
+        // var winWidth = window.innerWidth;
+        // var winHeight = window.innerHeight;
+        // alert(
+        // "Windows DPI:" + winDPI +
+        // ";\ruAgent:" + uAgent +
+        // ";\rScreen Width:" + screenWidth +
+        // ";\rScreen Height:" + screenHeight +
+        // ";\rWindow Width:" + winWidth +
+        // ";\rWindow Height:" + winHeight
+        // )
+      }
+    </script>
+  </body>
+</html>
