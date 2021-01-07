@@ -49,10 +49,10 @@
 
     <div class="content">
       <v-layout wrap class="px-4 pb-3" style="height:300px;">
-        <v-flex xs12 sm12 lg3>
+        <v-flex xs12 sm12 md3>
           <span>参观指南</span>
         </v-flex>
-        <v-flex xs12 sm12 lg9>
+        <v-flex xs12 sm12 md9>
           <div class="notice">
             <h2 span>通知公告</h2>
             <div>
