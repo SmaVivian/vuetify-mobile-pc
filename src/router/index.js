@@ -24,6 +24,12 @@ const routes = [
     meta: { title: '分页列表' }
   },
   {
+    path: '/demo4',
+    name: 'Demo4',
+    component: () => import('@views/demo/demo4.vue'),
+    meta: { title: '仅移动端存在的页面-活动报名-登录' }
+  },
+  {
     path: '/',
     name: 'Home',
     component: Home
