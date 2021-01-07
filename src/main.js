@@ -5,6 +5,8 @@ import store from './store'
 import vuetify from './plugins/vuetify'
 import request from '@/utils/request'
 
+import '@assets/css/theme.scss';
+
 Vue.config.productionTip = false
 
 Vue.prototype.$http = request
