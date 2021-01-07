@@ -5,7 +5,7 @@ module.exports = {
   },
   'extends': [
     'plugin:vue/essential',
-    'eslint:recommended'
+    'eslint:recommended'  // 需屏蔽eslint检查可注释此行
   ],
   parserOptions: {
     parser: 'babel-eslint'

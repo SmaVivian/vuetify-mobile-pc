@@ -8,12 +8,20 @@ const routes = [
   {
     path: '/demo1',
     name: 'Demo',
-    component: () => import('@views/demo/demo1.vue')
+    component: () => import('@views/demo/demo1.vue'),
+    meta: { title: '导航' }
   },
   {
     path: '/demo2',
     name: 'Demo2',
-    component: () => import('@views/demo/demo2.vue')
+    component: () => import('@views/demo/demo2.vue'),
+    meta: { title: 'pc和移动端适配用flex+px' }
+  },
+  {
+    path: '/demo3',
+    name: 'Demo3',
+    component: () => import('@views/demo/demo3.vue'),
+    meta: { title: '分页列表' }
   },
   {
     path: '/',

@@ -1,6 +1,18 @@
 <template>
   <!-- 在pc和移动端适配如图片、字体、间距等 -->
-  <div class="page-demo2" :class="{'md': $vuetify.breakpoint.mdAndDown}">
+  <div class="page-demo2" :class="{'g-mobile': $vuetify.breakpoint.mdAndDown}">
+    <p class="text-sm-center">
+      Left aligned text on viewports sized SM (small) or wider.
+    </p>
+    <p class="text-md-center">
+      Left aligned text on viewports sized MD (medium) or wider.
+    </p>
+    <p class="text-lg-center">
+      Left aligned text on viewports sized LG (large) or wider.
+    </p>
+    <p class="text-xl-center">
+      Left aligned text on viewports sized XL (extra-large) or wider.
+    </p>
     <div class="list">
       <div class="item pa-3 d-lg-flex" v-for="(item, index) in 10" :key="index">
         <img src="@images/1.jpg" alt="">
@@ -51,7 +63,8 @@
       }
     }
   }
-  &.md {
+  // 移动端的样式
+  &.g-mobile {
     .list {
       img {
         width: 100%;
