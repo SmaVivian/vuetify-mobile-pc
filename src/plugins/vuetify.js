@@ -4,6 +4,15 @@ import Vuetify from 'vuetify/lib/framework';
 Vue.use(Vuetify);
 
 export default new Vuetify({
+  breakpoint: {
+    scrollBarWidth: 16,
+    thresholds: {
+      xs: 600,
+      sm: 960,
+      md: 1200,
+      lg: 1920,
+    },
+  },
   theme: {
     themes: {
       light: {
