@@ -1,53 +1,15 @@
 <template>
-  <!-- 导航 -->
+  <!-- 面包屑、flex布局 -->
   <div class="page-demo1">
-    <div 
-      v-if="$vuetify.breakpoint.smAndDown" 
-      @click="drawer=!drawer">移动端菜单</div>
-    <!-- <v-toolbar
-      v-if="$vuetify.breakpoint.smAndDown"
-      dark
-      prominent
-      src="https://cdn.vuetifyjs.com/images/backgrounds/vbanner.jpg"
-    >
-      <v-app-bar-nav-icon class="hidden-md-and-up"></v-app-bar-nav-icon>
-
-      <v-toolbar-title>Vuetify</v-toolbar-title>
-
-      <v-spacer></v-spacer>
-
-      <v-btn icon>
-        <v-icon>mdi-export</v-icon>
-      </v-btn>
-    </v-toolbar> -->
-
-    <div class="nav">
-      <div class="item">首页</div>
-      <div class="item">展览</div>
-      <div class="item">馆藏</div>
-    </div>
-
-    <v-navigation-drawer
-      app
-      v-model="drawer"
-      class="brown lighten-2"
-      dark
-      disable-resize-watcher
-    >
-      <v-list>
-        <template v-for="(item, index) in items">
-          <v-list-item :key="index" :to="item.url">
-            <v-list-item-content>
-              {{ item.title }}
-            </v-list-item-content>
-          </v-list-item>
-          <v-divider :key="`divider-${index}`"></v-divider>
-        </template>
-      </v-list>
-    </v-navigation-drawer>
-
-
     <div class="content">
+      <!-- 面包屑 -->
+      <v-breadcrumbs :items="items" large>
+        <template v-slot:divider>
+          <v-icon>mdi-chevron-right</v-icon>
+        </template>
+      </v-breadcrumbs>
+
+      <!-- flex布局 -->
       <v-layout wrap class="px-4 pb-3" style="height:300px;">
         <v-flex xs12 sm12 md3>
           <span>参观指南</span>
@@ -57,6 +19,13 @@
             <h2 span>通知公告</h2>
             <div>
               垂直居中的内容
+              <p style="margin-bottom:100px">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis veniam blanditiis quidem eius nesciunt exercitationem aspernatur dolorum? Excepturi molestiae eos, iure tempore facilis dolore, ipsum quo temporibus quaerat cupiditate iusto!</p>
+              <p style="margin-bottom:100px">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis veniam blanditiis quidem eius nesciunt exercitationem aspernatur dolorum? Excepturi molestiae eos, iure tempore facilis dolore, ipsum quo temporibus quaerat cupiditate iusto!</p>
+              <p style="margin-bottom:100px">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis veniam blanditiis quidem eius nesciunt exercitationem aspernatur dolorum? Excepturi molestiae eos, iure tempore facilis dolore, ipsum quo temporibus quaerat cupiditate iusto!</p>
+              <p style="margin-bottom:100px">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis veniam blanditiis quidem eius nesciunt exercitationem aspernatur dolorum? Excepturi molestiae eos, iure tempore facilis dolore, ipsum quo temporibus quaerat cupiditate iusto!</p>
+              <p style="margin-bottom:100px">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis veniam blanditiis quidem eius nesciunt exercitationem aspernatur dolorum? Excepturi molestiae eos, iure tempore facilis dolore, ipsum quo temporibus quaerat cupiditate iusto!</p>
+              <p style="margin-bottom:100px">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis veniam blanditiis quidem eius nesciunt exercitationem aspernatur dolorum? Excepturi molestiae eos, iure tempore facilis dolore, ipsum quo temporibus quaerat cupiditate iusto!</p>
+              <p style="margin-bottom:100px">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis veniam blanditiis quidem eius nesciunt exercitationem aspernatur dolorum? Excepturi molestiae eos, iure tempore facilis dolore, ipsum quo temporibus quaerat cupiditate iusto!</p>
             </div>
           </div>
         </v-flex>
@@ -71,10 +40,21 @@
       return {
         drawer: false,
         items: [
-          { title: 'Menu', url: '/menu' },
-          { title: 'Profile', url: '/about' },
-          { title: 'Sign In', url: '/sign-in' },
-          { title: 'Join', url: '/join' }
+          {
+            text: '首页',
+            disabled: false,
+            href: '/',
+          },
+          {
+            text: '列表',
+            disabled: false,
+            href: 'demo3',
+          },
+          {
+            text: '详情',
+            disabled: true,
+            href: 'breadcrumbs_link_2',
+          },
         ]
       }
     }
@@ -83,13 +63,6 @@
 
 <style lang="scss" scoped>
 .page-demo1 {
-  .nav {
-    display: flex;
-    .item {
-
-    }
-  }
-
   .notice {
     display: flex;
     flex-direction: column;

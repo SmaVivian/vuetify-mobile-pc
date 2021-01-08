@@ -9,7 +9,7 @@ const routes = [
     path: '/demo1',
     name: 'Demo',
     component: () => import('@views/demo/demo1.vue'),
-    meta: { title: '导航' }
+    meta: { title: '面包屑、flex布局' }
   },
   {
     path: '/demo2',
@@ -28,6 +28,12 @@ const routes = [
     name: 'Demo4',
     component: () => import('@views/demo/demo4.vue'),
     meta: { title: '仅移动端存在的页面-活动报名-登录' }
+  },
+  {
+    path: '/demo5',
+    name: 'Demo5',
+    component: () => import('@views/demo/demo5.vue'),
+    meta: { title: 'tab列表' }
   },
   {
     path: '/',
