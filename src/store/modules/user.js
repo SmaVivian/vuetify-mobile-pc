@@ -2,6 +2,7 @@ import Cookies from 'js-cookie'
 const user = {
   namespaced: true,
   state: {
+    isMobile: false,
     userId: '',
     token: '', // 登录状态
     // userId: 'd0409cc9ee1b49a09a75edaaf38e048b',

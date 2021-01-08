@@ -1,6 +1,6 @@
 <template>
   <v-app id="app">
-    <v-main>
+    <v-main :class="{'app-mobile': $vuetify.breakpoint.mobile}">
       <router-view></router-view>
     </v-main>
   </v-app>

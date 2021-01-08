@@ -23,7 +23,7 @@
       if (this.$store.state.user.userId) {
         this.getDetail()
       } else if (this.$route.query.gz == '0') {
-        this.$toast('请先关注公众号')
+        // this.$toast('请先关注公众号')
       } else if (this.$route.query.wxlogin) {
         this.$store
           .dispatch('user/loginWechatAuth', this.$route.query.wxlogin)
@@ -31,7 +31,8 @@
             this.getDetail()
           })
           .catch(msg => {
-            this.$toast(msg)
+            console.log(msg)
+            // this.$toast(msg)
           })
       } else {
         let apiUrl = location.origin

@@ -5,6 +5,8 @@ Vue.use(Vuetify);
 
 export default new Vuetify({
   breakpoint: {
+    // mobileBreakpoint: 1200, // 写法1：屏幕宽度小于1200为移动端 
+    mobileBreakpoint: 'md', // 写法2：屏幕宽度小于1200为移动端 
     scrollBarWidth: 16,
     thresholds: {
       xs: 600,

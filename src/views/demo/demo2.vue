@@ -1,6 +1,6 @@
 <template>
   <!-- 在pc和移动端适配如图片、字体、间距等 -->
-  <div class="page-demo2" :class="{'g-mobile': $vuetify.breakpoint.mdAndDown}">
+  <div class="page-demo2" :class="{'g-mobile': $vuetify.breakpoint.mobile}">
     <p class="text-sm-center">
       Left aligned text on viewports sized SM (small) or wider.
     </p>
