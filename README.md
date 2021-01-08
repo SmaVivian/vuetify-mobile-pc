@@ -27,3 +27,7 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+### 说明
+- 安装Material Design 图标
+`npm install @mdi/font -D`
