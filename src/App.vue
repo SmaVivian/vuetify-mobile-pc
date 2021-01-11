@@ -1,5 +1,5 @@
 <template>
-  <v-app id="app">
+  <v-app class="g-app" id="app">
     <!-- <cmpHeader></cmpHeader> -->
     <v-main :class="{'app-mobile': $vuetify.breakpoint.mobile}">
       <v-container fluid>

@@ -1,11 +1,17 @@
 html {
   // 滚动条正在显示，即使我的内容没有垂直溢出 - 暂未出现此问题
-  // overflow: auto;
-}
-a {
-  text-decoration: none;
+  overflow: auto;
 }
 
-.v-application p {
-  margin-bottom: 0;
+.v-application.g-app {
+  .container {
+    padding: 0;   // 不设置为0 响应式瀑布流会有问题
+  }
+  p {
+    margin-bottom: 0;
+  }
+  a {
+    text-decoration: none;
+    color: #333;
+  }
 }
