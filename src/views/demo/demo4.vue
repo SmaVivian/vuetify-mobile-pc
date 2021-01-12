@@ -5,7 +5,8 @@
       type="success"
     >是的冯绍峰</v-alert>
     <span @click="handleConfirm">消息确认框</span>
-    <span @click="handleAlert">消息提示框</span>
+    <span style="margin-left:20px;" @click="handleAlert">消息提示框</span>
+    <span style="margin-left:20px;" @click="test">测试测试</span>
   </div>
 </template>
 
@@ -34,6 +35,14 @@
       },
       handleAlert() {
         this.$alert('提示提示', {type: 'info'})
+      },
+      test() {
+        this.$test('用户会话过期，请重新登录', () => {
+          console.log('我被调用了')
+        })
+        // this.$test('用户会话过期，请重新登录', () => {
+        //   console.log('我被调用了')
+        // })
       }
     },
     created() {

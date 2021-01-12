@@ -27,13 +27,13 @@ const routes = [
     path: '/demo4',
     name: 'Demo4',
     component: () => import('@views/demo/demo4.vue'),
-    meta: { title: '仅移动端存在的页面-活动报名-登录' }
+    meta: { title: '提示框+移动端微信登录' }
   },
   {
     path: '/demo5',
     name: 'Demo5',
     component: () => import('@views/demo/demo5.vue'),
-    meta: { title: 'tab列表' }
+    meta: { title: 'tab列表+瀑布流' }
   },
   {
     path: '/',
